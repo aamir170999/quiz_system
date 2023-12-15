@@ -1,29 +1,61 @@
-
 body .password-field {
     position: relative;
-    }
-    body .password-field input {
+}
+body .password-field input {
     /* width: 30rem;
     height: 4em; */
     padding: 1em;
     border: 0;
     /* border-radius: 10px; */
+}
 
-    }
-
-    body .password-field #toggler123 {
+body .password-field #toggler123 {
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    }
+}
 
-    body .password-field #toggler1 {
+body .password-field #toggler1 {
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    }
+}
+/* ---------------------------------------------------------------------------- */
+.pagination {
+    justify-content: center;
+}
 
+/* ---------------------------------------------------------------------------- */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+#image_file {
+    width: fit-content;
+}
+
+/* ---------------------------------------------------------------------------- */
+.moreoptionbtn {
+    display: flex;
+    align-items: center;
+    height: 37px;
+    margin-top: 30px;
+    border-radius: 5px;
+    width: 450px;
+    background-color: rgb(224, 230, 237);
+}

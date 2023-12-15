@@ -8,12 +8,17 @@
     <x-slot:headerFiles>
         <!--  BEGIN CUSTOM STYLE FILE  -->
         <link rel="stylesheet" href="{{asset('plugins/apex/apexcharts.css')}}">
-
+        <link rel="stylesheet" href="{{asset('carousal.css')}}">
         @vite(['resources/scss/light/assets/components/list-group.scss'])
         @vite(['resources/scss/light/assets/widgets/modules-widgets.scss'])
 
         @vite(['resources/scss/dark/assets/components/list-group.scss'])
         @vite(['resources/scss/dark/assets/widgets/modules-widgets.scss'])
+
+
+
+
+
         <!--  END CUSTOM STYLE FILE  -->
     </x-slot>
     <!-- END GLOBAL MANDATORY STYLES -->
@@ -23,22 +28,22 @@
     <div class="row layout-top-spacing">
 
         <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
-            <x-widgets._w-six title="Statistics"/>
+            <x-widgets._w-six title="Students"/>
         </div>
 
         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
-            <x-widgets._w-card-four title="Expenses"/>
+            <x-widgets._w-card-four title="Exams"/>
         </div>
 
         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
             <x-widgets._w-card-five title="Total Balance" balance="$41,741.42" percentage="+ 13.6%" button="View Report" link="javascript:void(0);"/>
         </div>
 
-        <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
-            <x-widgets._w-chart-three title="Unique Visitors"/>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+            <x-widgets._w-chart-three title="Trending Exams"/>
         </div>
 
-        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+        {{-- <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
             <x-widgets._w-activity-five title="Activity Log"/>
         </div>
 
@@ -60,19 +65,21 @@
 
         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
             <x-widgets._w-card-two title="Dev Summit - New York"/>
-        </div>
+        </div> --}}
 
     </div>
 
     <!--  BEGIN CUSTOM SCRIPTS FILE  -->
     <x-slot:footerFiles>
         <script src="{{asset('plugins/apex/apexcharts.min.js')}}"></script>
-
         {{-- Analytics --}}
         @vite(['resources/assets/js/widgets/_wSix.js'])
         @vite(['resources/assets/js/widgets/_wChartThree.js'])
         @vite(['resources/assets/js/widgets/_wHybridOne.js'])
         @vite(['resources/assets/js/widgets/_wActivityFive.js'])
+
+
+
     </x-slot>
     <!--  END CUSTOM SCRIPTS FILE  -->
 </x-base-layout>

@@ -1,7 +1,11 @@
 <?php
 
 use App\Http\Controllers\ExamController;
+use App\Http\Controllers\QuestionController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Exam;
+use App\Models\Seminar;
+use App\Models\Question;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+   
     if (!auth()->check()) {
         return redirect()->route('login');
     }
@@ -34,5 +39,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::resource('exams', ExamController::class);
+Route::resource('questions', QuestionController::class);
 
-Route::post('exams-datatable', [ExamController::class, 'datatable'])->name('exams.datatable');
+
+Route::get('exams-datatable', [ExamController::class, 'dataTable'])->name('exams.datatable');
+route::get('add-question/{exam}', [QuestionController::class, 'addQuestion'])->name('question.add');
+
+
+Route::get('/student', function () {
+    $exams = Exam::all();
+    return view('student.index', compact('exams'));
+})->name('StudentIndex');

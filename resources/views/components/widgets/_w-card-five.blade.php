@@ -1,9 +1,9 @@
-{{-- 
+{{--
 
 /**
 *
 * Created a new component <x-widgets._w-card-five/>.
-* 
+*
 */
 
 --}}
@@ -16,12 +16,12 @@
             <div class="info-box">
                 <div class="icon">
                     <span>
-                        <img src="{{Vite::asset('resources/images/money-bag.png')}}" alt="money-bag">
+                        <img style="margin-left: 10px" src="{{Vite::asset('resources/images/exam.png')}}" alt="money-bag">
                     </span>
                 </div>
 
                 <div class="balance-info">
-                    <h6>{{$title}}</h6>
+                    <h6>{{$title="Total Exam"}}</h6>
                     <p>{{$balance}}</p>
                 </div>
             </div>

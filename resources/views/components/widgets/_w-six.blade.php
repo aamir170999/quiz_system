@@ -1,9 +1,9 @@
-{{-- 
+{{--
 
 /**
 *
 * Created a new component <x-rtl.widgets._w-six/>.
-* 
+*
 */
 
 --}}
@@ -11,7 +11,7 @@
 
 <div class="widget widget-six">
     <div class="widget-heading">
-        <h6 class="">{{$title}}</h6>
+        <h6 class="">{{$title="Students"}}</h6>
         <div class="task-action">
             <div class="dropdown">
                 <a class="dropdown-toggle" href="#" role="button" id="statistics" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

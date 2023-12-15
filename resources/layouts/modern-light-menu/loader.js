@@ -2,7 +2,7 @@ window.addEventListener("load", function(){
 
     // Remove Loader
     var load_screen = document.getElementById("load_screen");
-    
+
     document.body.removeChild(load_screen);
 
     var layoutName = 'Vertical Light Menu';
@@ -31,7 +31,7 @@ window.addEventListener("load", function(){
         let ParsedObject = getParseObject;
 
         if (getcorkThemeObject !== null) {
-               
+
             if (ParsedObject.admin === 'Cork Admin Template') {
 
                 if (ParsedObject.settings.layout.name === layoutName) {
@@ -40,7 +40,7 @@ window.addEventListener("load", function(){
                 } else {
                     corkThemeObject = settingsObject;
                 }
-                
+
             } else {
                 if (ParsedObject.admin === undefined) {
                     corkThemeObject = settingsObject;
@@ -53,12 +53,12 @@ window.addEventListener("load", function(){
     }
 
     // Get Dark Mode Information i.e darkMode: true or false
-    
+
     if (corkThemeObject.settings.layout.darkMode) {
         sessionStorage.setItem("theme", JSON.stringify(corkThemeObject));
         let getcorkThemeObject = sessionStorage.getItem("theme");
         let getParseObject = JSON.parse(getcorkThemeObject);
-    
+
         if (getParseObject.settings.layout.darkMode) {
             let ifStarterKit = document.body.getAttribute('page') === 'starter-pack' ? true : false;
             document.body.classList.add('layout-dark');
@@ -81,7 +81,7 @@ window.addEventListener("load", function(){
                     document.querySelector('.navbar-logo').setAttribute('src', '../../src/assets/img/logo2.svg');
                 }
             }
-            
+
         }
     }
 
@@ -96,5 +96,5 @@ window.addEventListener("load", function(){
             document.querySelector('.middle-content').classList.remove('container-xxl');
         }
     }
-    
+
 });

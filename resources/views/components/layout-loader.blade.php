@@ -1,9 +1,9 @@
-{{-- 
+{{--
 
 /**
 *
 * Created a new component <x-layout-loader/>.
-* 
+*
 */
 
 --}}
